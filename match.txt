@@ -1,0 +1,31 @@
+Info from Fig4_12.c matching group two of /(match)\((.*)\);/
+    
+'+'
+match match('+');
+match[0]::: match('+');
+match[1]::: match 
+    
+'@'
+match match('@');
+match[0]::: match('@');
+match[1]::: match 
+    
+'*'
+match match('*');
+match[0]::: match('*');
+match[1]::: match 
+    
+'('
+match match('(');
+match[0]::: match('(');
+match[1]::: match 
+    
+')'
+match match(')');
+match[0]::: match(')');
+match[1]::: match 
+    
+token
+match match(token);
+match[0]::: match(token);
+match[1]::: match 

@@ -1,0 +1,33 @@
+A)
+command ::= expr '\n'
+expr    ::= term | expr '+' term
+expr    ::= term { '+' term }
+term    ::= factor | term '*' factor
+term    ::= factor { '*' factor }
+factor  ::= '(' expr ')' | number
+
+B)
+* > +
+
+C)
+3 + ( 5 * 7 )
+( 3 * 5 ) * 7
+
+D)
+command
+expr
+term '+' term
+factor '+' term
+number '+' term
+number '+' term '*' factor
+number '+' factor '*' factor
+number '+' number '*' factor
+number '+' number '*' number
+
+command
+expr
+term
+factor '*' factor '*' factor
+number '*' factor '*' factor
+number '*' number '*' factor
+number '*' number '*' number

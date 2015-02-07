@@ -1,0 +1,22 @@
+command ::= expr '\n'
+expr    ::= avg | expr '+' avg
+expr    ::= avg { '+' avg }
+avg     ::= term | expr '@' term
+avg     ::= term { '@' term }
+term    ::= factor | term '*' factor
+term    ::= factor { '*' factor }
+factor  ::= '(' expr ')' | number
+
+A)
+Change the grammer from:
+expr -> term
+to this:
+expr -> avg -> term
+
+B)
+( 10 + 20 ) + 30
+( 10 @ (20 * 2 ) ) @ 6
+( 2 @ 10 ) + ( 51 @ 5 )
+
+C)
+All three have the same associativity
